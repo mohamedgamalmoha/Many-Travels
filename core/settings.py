@@ -71,6 +71,7 @@ INSTALLED_APPS = [
     'rest_flex_fields',
     # Custom apps
     'accounts',
+    'agency'
 ]
 
 MIDDLEWARE = [
