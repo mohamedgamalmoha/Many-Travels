@@ -103,6 +103,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.User'
+
 LOGIN_REDIRECT_URL = None
 LOGOUT_REDIRECT_URL = None
 
