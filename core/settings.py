@@ -181,7 +181,10 @@ LOCALE_PATHS = [
 
 IS_MONOLINGUAL = False
 
-TRANSLATABLE_MODEL_MODULES = []
+TRANSLATABLE_MODEL_MODULES = [
+    'locations.models',
+    'agency.models'
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
