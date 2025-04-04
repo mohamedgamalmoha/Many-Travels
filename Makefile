@@ -35,16 +35,16 @@ teardown-postgres:
 stop-postgres:
 	service postgresql stop
 
-make-migrations:
+makemigrations:
 	$(PYTHON) manage.py makemigrations
 
-apply-migrations:
+migrate:
 	$(PYTHON) manage.py migrate
 
 run-server:
 	$(PYTHON) manage.py runserver 0.0.0.0:8000
 
-all: install-requirements install-postgres run-postgres setup-postgres make-migrations apply-migrations run-server
+all: install-requirements install-postgres run-postgres setup-postgres makemigrations migrate run-server
 
 test:
 	$(PYTHON) pytest -v -p no:warnings --tb=short --setup-show
