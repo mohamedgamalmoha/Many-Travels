@@ -58,6 +58,11 @@ class Agency(models.Model):
     create_at = models.DateTimeField(auto_now_add=True, verbose_name=_("Create At"))
     update_at = models.DateTimeField(auto_now=True, verbose_name=_("Update At"))
 
+    class Meta:
+        verbose_name = _("Agency")
+        verbose_name_plural = _("Agencies")
+        ordering = ('order', '-create_at', '-update_at')
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super().save(*args, **kwargs)
