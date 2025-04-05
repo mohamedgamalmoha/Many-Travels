@@ -1,6 +1,6 @@
 from modeltranslation.translator import translator, TranslationOptions
 
-from locations.models import Country, City
+from locations.models import Country, City, State
 
 
 class NameTranslationOptions(TranslationOptions):
@@ -9,3 +9,4 @@ class NameTranslationOptions(TranslationOptions):
 
 translator.register(Country,  NameTranslationOptions)
 translator.register(City, NameTranslationOptions)
+translator.register(State, NameTranslationOptions)
