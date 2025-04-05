@@ -1,7 +1,14 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 
-from agency.models import Agency, HeaderImage, SocialMediaLink, Tag, Travel
+from agency.models import Agency, WorkTime, HeaderImage, SocialMediaLink, Tag, Travel
+
+
+class WorkTimeInline(admin.TabularInline):
+    model = WorkTime
+    extra = 1
+    min = 0
+    show_change_link = False
 
 
 class HeaderImageInline(admin.TabularInline):
@@ -36,24 +43,26 @@ class AgencyAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     readonly_fields = ('create_at', 'update_at')
     fieldsets = (
-        (_('Main Info'), {'fields': ('owner', ('name', 'slug'), 'email', 'contact_number', 'image', 'is_active',
-                                     'order')}),
+        (_('Main Info'), {'fields': ('owner', ('name', 'slug'), 'description', 'email', 'contact_number',
+                                     'whatsapp_number')}),
+        (_('More Info'), {'fields': ('country','city', 'state', 'is_active', 'order', 'image')}),
         (_('Theme'), {'fields': ('primary_color', 'border_color')}),
         (_('Important Dates'), {'fields': ('create_at', 'update_at')}),
     )
-    inlines = [HeaderImageInline, SocialMediaLinkInline]
+    inlines = [WorkTimeInline, HeaderImageInline, SocialMediaLinkInline]
 
 
 class TravelAdmin(admin.ModelAdmin):
     list_display = ('name', 'agency', 'is_active', 'create_at', 'update_at')
-    list_filter = ('is_active',)
+    list_filter = ('is_active','travel_type', 'housing_type')
     search_fields = ('name', 'description')
     readonly_fields = ('create_at', 'update_at')
     fieldsets = (
-        (_('Main Info'), {'fields': ('agency', 'name', 'description', 'order')}),
+        (_('Main Info'), {'fields': ('agency', 'name', 'description', 'price', 'after_sale_price')}),
         (_('Location'), {'fields': ('origin_country', 'origin_city', 'destination_country', 'destination_city')}),
         (_('Date'), {'fields': ('start_date', 'end_date', 'duration')}),
-        (_('More Info'), {'fields': ('price', 'after_sale_price', 'tag', 'is_featured', 'is_active', 'image')}),
+        (_('More Info'), {'fields': ('travel_type', 'housing_type', 'tags', 'is_featured', 'is_active',  'order',
+                                     'image')}),
         (_('Important Dates'), {'fields': ('create_at', 'update_at')}),
     )
 
