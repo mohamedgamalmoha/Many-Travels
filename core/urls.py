@@ -30,6 +30,9 @@ urlpatterns = [
     # path('dashboard/', customer_admin_site.urls),
     path('admin', RedirectView.as_view(url='/admin/', permanent=True)),
     path('admin/', admin.site.urls),    path('i18n/', include('django.conf.urls.i18n')),
+    path('api/locations/', include('locations.api.urls'), name='locations'),
+    path('api/agencies/', include('agency.api.urls'), name='agencies'),
+    path('api/info/', include('info.api.urls'), name='info'),
     path('jsi18n/', JavaScriptCatalog.as_view(), name='javascript-catalog')
 ]
 
