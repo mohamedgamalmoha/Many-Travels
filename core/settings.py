@@ -74,7 +74,8 @@ INSTALLED_APPS = [
     # Custom apps
     'accounts',
     'agency',
-    'locations'
+    'locations',
+    'info'
 ]
 
 MIDDLEWARE = [
