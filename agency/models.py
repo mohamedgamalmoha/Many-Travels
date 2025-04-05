@@ -8,6 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from django_resized import ResizedImageField
 from phonenumber_field.modelfields import PhoneNumberField
 
+from info.models import Theme
 from locations.models import Country, City, State
 from agency.constants import FORCED_IMAGE_FORMAT, MAX_FILE_SIZE
 from agency.enums import SocialMediaPlatform, DaysOfWeekChoice, TravelType, HousingType
@@ -46,8 +47,8 @@ class Agency(models.Model):
     is_active = models.BooleanField(default=True, verbose_name=_("Active"))
     order = models.PositiveIntegerField(default=0, blank=True, verbose_name=_('Order By'))
 
-    # theme = models.ForeignKey(Theme, on_delete=models.SET_NULL, null=True, related_name='shops',
-    #                           verbose_name=_("Theme"))
+    theme = models.ForeignKey(Theme, on_delete=models.SET_NULL, null=True, related_name='shops',
+                              verbose_name=_("Theme"))
     primary_color = models.CharField(max_length=7, null=True, validators=[validate_hex_color],
                                      verbose_name=_('Primary Color'),
                                      help_text=_("Primary color for template (e.g., #RRGGBB or #RGB)."))

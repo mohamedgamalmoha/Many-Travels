@@ -46,7 +46,7 @@ class AgencyAdmin(admin.ModelAdmin):
         (_('Main Info'), {'fields': ('owner', ('name', 'slug'), 'description', 'email', 'contact_number',
                                      'whatsapp_number')}),
         (_('More Info'), {'fields': ('country','city', 'state', 'is_active', 'order', 'image')}),
-        (_('Theme'), {'fields': ('primary_color', 'border_color')}),
+        (_('Theme'), {'fields': ('theme', 'primary_color', 'border_color')}),
         (_('Important Dates'), {'fields': ('create_at', 'update_at')}),
     )
     inlines = [WorkTimeInline, HeaderImageInline, SocialMediaLinkInline]
