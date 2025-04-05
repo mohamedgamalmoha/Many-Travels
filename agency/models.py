@@ -1,3 +1,5 @@
+from datetime import time
+
 from django.db import models
 from django.contrib.auth import get_user_model
 from django.utils.text import slugify
@@ -6,9 +8,9 @@ from django.utils.translation import gettext_lazy as _
 from django_resized import ResizedImageField
 from phonenumber_field.modelfields import PhoneNumberField
 
-from locations.models import Country, City
-from agency.enums import SocialMediaPlatform
+from locations.models import Country, City, State
 from agency.constants import FORCED_IMAGE_FORMAT, MAX_FILE_SIZE
+from agency.enums import SocialMediaPlatform, DaysOfWeekChoice, TravelType, HousingType
 from agency.validators import FileSizeValidator, validate_hex_color, validate_english_alphanum
 
 
@@ -19,14 +21,25 @@ class Agency(models.Model):
     owner = models.OneToOneField(User, on_delete=models.CASCADE, related_name="shop", verbose_name=_("Owner"))
 
     name = models.CharField(max_length=255, verbose_name=_("Shop Name"))
+    description = models.TextField(blank=True, null=True, verbose_name=_("Description"))
+
     slug = models.SlugField(max_length=255, unique=True, validators=[validate_english_alphanum],
                             verbose_name=_("Slug"),
                             help_text=_("Unique identifier for the shop used in the URL. "
                                         "It must contain only English letters, numerics, dashes (-), "
                                         "and underscores (_)"))
 
+    country = models.ForeignKey(Country, null=True, on_delete=models.SET_NULL, related_name="agencies",
+                                verbose_name=_("Country"))
+    city = models.ForeignKey(City, null=True, on_delete=models.SET_NULL, related_name="agencies",
+                             verbose_name=_("City"))
+    state = models.ForeignKey(State, null=True, on_delete=models.SET_NULL, related_name="agencies",
+                              verbose_name=_("State"))
+
     email = models.EmailField(blank=True, null=True, verbose_name=_("Email"))
     contact_number = PhoneNumberField(blank=True, null=True, verbose_name=_("Contact Number"))
+    whatsapp_number = PhoneNumberField(blank=True, null=True, verbose_name=_("WhatsApp Number"))
+
     image = ResizedImageField(null=True, size=[300, 300], quality=100, force_format=FORCED_IMAGE_FORMAT,
                               validators=[FileSizeValidator(max_upload_file_size=MAX_FILE_SIZE)],
                               upload_to='shops/', verbose_name=_("Image"))
@@ -51,6 +64,22 @@ class Agency(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class WorkTime(models.Model):
+    agency = models.ForeignKey(Agency, on_delete=models.CASCADE, related_name='work_times', verbose_name=_("Agency"))
+    day = models.CharField(max_length=3, choices=DaysOfWeekChoice.choices, verbose_name=_("Day"))
+    is_close = models.BooleanField(default=False, verbose_name=_('Close'),
+                                   help_text=_("Indicates whether the restaurant is close on this day"))
+    opening_time = models.TimeField(blank=True, null=True, default=time(9, 0),
+                                    verbose_name=_("Opening Time"))  # 9:00 AM default
+    closing_time = models.TimeField(blank=True, null=True, default=time(18, 0),
+                                    verbose_name=_("Closing Time"))  # 6:00 PM default
+
+    class Meta:
+        verbose_name = _("Work Time")
+        verbose_name_plural = _("Work Times")
+        unique_together = ('agency', 'day')
 
 
 class HeaderImage(models.Model):
@@ -119,10 +148,12 @@ class Travel(models.Model):
     destination_city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="destination_travels",
                                          verbose_name=_("Destination City"))
 
+    travel_type = models.CharField(max_length=20, null=True, choices=TravelType.choices, verbose_name=_("Travel Type"))
+    housing_type = models.CharField(max_length=20, null=True, choices=HousingType.choices,
+                                    verbose_name=_("Housing Type"))
+
     start_date = models.DateField(verbose_name=_("Start Date"))
     end_date = models.DateField(verbose_name=_("End Date"))
-
-    duration = models.PositiveIntegerField(verbose_name=_("Duration (Days)"))
 
     image = ResizedImageField(null=True, size=[800, 500], quality=100, force_format=FORCED_IMAGE_FORMAT,
                               verbose_name=_("Image"))
@@ -131,8 +162,7 @@ class Travel(models.Model):
     after_sale_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True,
                                            verbose_name=_("Sale Price"))
 
-    tag = models.ForeignKey(Tag, blank=True, null=True, on_delete=models.SET_NULL, related_name="travels",
-                            verbose_name=_("Tag"))
+    tags = models.ManyToManyField(Tag, blank=True, verbose_name=_("Tags"))
 
     is_featured = models.BooleanField(default=False, verbose_name=_("Featured"))
     is_active = models.BooleanField(default=True, verbose_name=_("Active"))
