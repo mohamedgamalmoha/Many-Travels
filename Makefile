@@ -41,10 +41,10 @@ makemigrations:
 migrate:
 	$(PYTHON) manage.py migrate
 
-run-server:
+runserver:
 	$(PYTHON) manage.py runserver 0.0.0.0:8000
 
-all: install-requirements install-postgres run-postgres setup-postgres makemigrations migrate run-server
+all: install-requirements install-postgres run-postgres setup-postgres makemigrations migrate runserver
 
 test:
 	$(PYTHON) pytest -v -p no:warnings --tb=short --setup-show
