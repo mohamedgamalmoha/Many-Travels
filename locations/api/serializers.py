@@ -10,7 +10,7 @@ class CountrySerializer(FlexFieldsModelSerializer):
         exclude = ()
         read_only_fields = ('created_at', 'updated_at')
         expandable_fields = {
-            'cities': ('locations.api.CitySerializer', {'many': True, "omit": ["country"]})
+            'cities': ('locations.api.serializers.CitySerializer', {'many': True, "omit": ["country"]})
         }
 
 
@@ -21,8 +21,8 @@ class CitySerializer(FlexFieldsModelSerializer):
         exclude = ()
         read_only_fields = ('created_at', 'updated_at')
         expandable_fields = {
-            'country': ('locations.api.CountrySerializer', {'many': False, 'omit': ['city']}),
-            'states': ('locations.api.StateSerializer', {'many': True,'omit': ['city']})
+            'country': ('locations.api.serializers.CountrySerializer', {'many': False, 'omit': ['city']}),
+            'states': ('locations.api.serializers.StateSerializer', {'many': True,'omit': ['city']})
         }
 
 
@@ -33,5 +33,5 @@ class StateSerializer(FlexFieldsModelSerializer):
         exclude = ()
         read_only_fields = ('created_at', 'updated_at')
         expandable_fields = {
-            'city': ('locations.api.CitySerializer', {'many': False, 'omit': ['states']}),
+            'city': ('locations.api.serializers.CitySerializer', {'many': False, 'omit': ['states']}),
         }
