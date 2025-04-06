@@ -41,6 +41,15 @@ makemigrations:
 migrate:
 	$(PYTHON) manage.py migrate
 
+makemessages:
+	$(PYTHON) manage.py makemessages -l ar -l he
+
+compilemessages:
+	$(PYTHON) manage.py compilemessages
+
+collectstatic:
+	$(PYTHON) manage.py collectstatic --noinput
+
 runserver:
 	$(PYTHON) manage.py runserver 0.0.0.0:8000
 
