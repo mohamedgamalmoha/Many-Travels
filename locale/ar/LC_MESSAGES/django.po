@@ -1,0 +1,573 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-06 09:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: accounts/admin.py:38
+msgid "Basic Info"
+msgstr "المعلومات الأساسية"
+
+#: accounts/admin.py:39
+msgid "Personal Info"
+msgstr "المعلومات الشخصية"
+
+#: accounts/admin.py:40
+msgid "Permissions"
+msgstr "الأذونات"
+
+#: accounts/admin.py:41 agency/admin.py:36 agency/admin.py:50
+#: agency/admin.py:66 info/admin.py:25 info/admin.py:45 info/admin.py:52
+#: info/admin.py:62 info/admin.py:72 locations/admin.py:25
+#: locations/admin.py:40 locations/admin.py:55
+msgid "Important Dates"
+msgstr "تواريخ هامة"
+
+#: accounts/apps.py:8
+msgid "Accounts"
+msgstr "الحسابات"
+
+#: accounts/models.py:7 info/models.py:123
+msgid "Full Name"
+msgstr "الاسم الكامل"
+
+#: accounts/models.py:8 info/models.py:125
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#: agency/admin.py:35 agency/admin.py:46 agency/admin.py:61 info/admin.py:24
+#: info/admin.py:44 info/admin.py:51 info/admin.py:61 info/admin.py:71
+#: locations/admin.py:24 locations/admin.py:39 locations/admin.py:54
+msgid "Main Info"
+msgstr "المعلومات الرئيسية"
+
+#: agency/admin.py:48 agency/admin.py:64
+msgid "More Info"
+msgstr "مزيد من المعلومات"
+
+#: agency/admin.py:49 agency/models.py:51 info/models.py:114
+msgid "Theme"
+msgstr "الثيمة"
+
+#: agency/admin.py:62
+msgid "Location"
+msgstr "الموقع"
+
+#: agency/admin.py:63
+msgid "Date"
+msgstr "التاريخ"
+
+#: agency/apps.py:8 agency/models.py:64
+msgid "Agencies"
+msgstr "وكالات"
+
+#: agency/enums.py:6
+msgid "Facebook"
+msgstr "فيسبوك"
+
+#: agency/enums.py:7
+msgid "Twitter"
+msgstr "تويتر"
+
+#: agency/enums.py:8
+msgid "Instagram"
+msgstr "إنستغرام"
+
+#: agency/enums.py:9
+msgid "TikTok"
+msgstr "تيك توك"
+
+#: agency/enums.py:10
+msgid "YouTube"
+msgstr "يوتيوب"
+
+#: agency/enums.py:11
+msgid "Pinterest"
+msgstr "بينترست"
+
+#: agency/enums.py:12
+msgid "Phone Number 1"
+msgstr "رقم الهاتف 1"
+
+#: agency/enums.py:13
+msgid "Phone Number 2"
+msgstr "رقم الهاتف 2"
+
+#: agency/enums.py:17
+msgid "Saturday"
+msgstr "السبت"
+
+#: agency/enums.py:18
+msgid "Sunday"
+msgstr "الأحد"
+
+#: agency/enums.py:19
+msgid "Monday"
+msgstr "الاثنين"
+
+#: agency/enums.py:20
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#: agency/enums.py:21
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#: agency/enums.py:22
+msgid "Thursday"
+msgstr "الخميس"
+
+#: agency/enums.py:23
+msgid "Friday"
+msgstr "الجمعة"
+
+#: agency/enums.py:27
+msgid "Single"
+msgstr "أعزب"
+
+#: agency/enums.py:28
+msgid "Couple"
+msgstr "زوجان"
+
+#: agency/enums.py:29
+msgid "Family"
+msgstr "عائلة"
+
+#: agency/enums.py:30
+msgid "Group"
+msgstr "مجموعة"
+
+#: agency/enums.py:34
+msgid "Apartment"
+msgstr "شقة"
+
+#: agency/enums.py:35
+msgid "Villa"
+msgstr "فيلا"
+
+#: agency/enums.py:36
+msgid "Hostel"
+msgstr "نزل"
+
+#: agency/enums.py:37
+msgid "Camping"
+msgstr "التخييم"
+
+#: agency/enums.py:38
+msgid "Guesthouse"
+msgstr "بيت ضيافة"
+
+#: agency/enums.py:39
+msgid "Resort"
+msgstr "منتجع"
+
+#: agency/enums.py:40
+msgid "1 Star Hotel"
+msgstr "فندق 1 نجمة"
+
+#: agency/enums.py:41
+msgid "2 Star Hotel"
+msgstr "فندق 2 نجمة"
+
+#: agency/enums.py:42
+msgid "3 Star Hotel"
+msgstr "فندق 3 نجوم"
+
+#: agency/enums.py:43
+msgid "4 Star Hotel"
+msgstr "فندق 4 نجوم"
+
+#: agency/enums.py:44
+msgid "5 Star Hotel"
+msgstr "فندق 5 نجوم"
+
+#: agency/models.py:22
+msgid "Owner"
+msgstr "المالك"
+
+#: agency/models.py:24
+msgid "Shop Name"
+msgstr "اسم المتجر"
+
+#: agency/models.py:25 agency/models.py:146 info/models.py:13 info/models.py:66
+#: info/models.py:85 info/models.py:104
+msgid "Description"
+msgstr "الوصف"
+
+#: agency/models.py:28
+msgid "Slug"
+msgstr "الاسم الرمزي"
+
+#: agency/models.py:29
+msgid ""
+"Unique identifier for the shop used in the URL. It must contain only English "
+"letters, numerics, dashes (-), and underscores (_)"
+msgstr ""
+"معرف فريد للمتجر يستخدم في عنوان URL. يجب أن يحتوي فقط على حروف إنجليزية، "
+"أرقام، شرطات (-)، وشرطات سفلية (_)"
+
+#: agency/models.py:34 locations/models.py:12 locations/models.py:26
+msgid "Country"
+msgstr "الدولة"
+
+#: agency/models.py:36 locations/models.py:34 locations/models.py:48
+msgid "City"
+msgstr "المدينة"
+
+#: agency/models.py:38 locations/models.py:56
+msgid "State"
+msgstr "الولاية"
+
+#: agency/models.py:40 info/models.py:124
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: agency/models.py:41
+msgid "Contact Number"
+msgstr "رقم الاتصال"
+
+#: agency/models.py:42
+msgid "WhatsApp Number"
+msgstr "رقم واتساب"
+
+#: agency/models.py:46 agency/models.py:96 agency/models.py:165
+#: info/models.py:16 info/models.py:52 info/models.py:69 info/models.py:88
+#: info/models.py:107
+msgid "Image"
+msgstr "صورة"
+
+#: agency/models.py:47 agency/models.py:97 agency/models.py:113
+#: agency/models.py:128 agency/models.py:174 info/models.py:34
+#: info/models.py:53 info/models.py:70 info/models.py:89 info/models.py:109
+msgid "Active"
+msgstr "نشط"
+
+#: agency/models.py:48 agency/models.py:129 agency/models.py:175
+msgid "Order By"
+msgstr "الترتيب حسب"
+
+#: agency/models.py:53
+msgid "Primary Color"
+msgstr "اللون الأساسي"
+
+#: agency/models.py:54
+msgid "Primary color for template (e.g., #RRGGBB or #RGB)."
+msgstr "اللون الأساسي للقالب (على سبيل المثال، #RRGGBB أو #RGB)."
+
+#: agency/models.py:56
+msgid "Border Color"
+msgstr "لون الحدود"
+
+#: agency/models.py:57
+msgid "Border color for template (e.g., #RRGGBB or #RGB)."
+msgstr "لون الحدود للقالب (على سبيل المثال، #RRGGBB أو #RGB)."
+
+#: agency/models.py:59 agency/models.py:114 agency/models.py:130
+#: agency/models.py:177 info/models.py:17 info/models.py:35 info/models.py:71
+#: info/models.py:90 info/models.py:110 info/models.py:127
+#: locations/models.py:8 locations/models.py:30 locations/models.py:52
+msgid "Create At"
+msgstr "تم الإنشاء في"
+
+#: agency/models.py:60 agency/models.py:115 agency/models.py:131
+#: agency/models.py:178 info/models.py:18 info/models.py:36 info/models.py:72
+#: info/models.py:91 info/models.py:111 info/models.py:128
+#: locations/models.py:9 locations/models.py:31 locations/models.py:53
+msgid "Update At"
+msgstr "تم التحديث في"
+
+#: agency/models.py:63 agency/models.py:76
+msgid "Agency"
+msgstr "وكالة"
+
+#: agency/models.py:77
+msgid "Day"
+msgstr "اليوم"
+
+#: agency/models.py:78
+msgid "Close"
+msgstr "مغلق"
+
+#: agency/models.py:79
+msgid "Indicates whether the restaurant is close on this day"
+msgstr "يشير إلى ما إذا كان المطعم مغلقًا في هذا اليوم"
+
+#: agency/models.py:81
+msgid "Opening Time"
+msgstr "وقت الافتتاح"
+
+#: agency/models.py:83
+msgid "Closing Time"
+msgstr "وقت الإغلاق"
+
+#: agency/models.py:86
+msgid "Work Time"
+msgstr "وقت العمل"
+
+#: agency/models.py:87
+msgid "Work Times"
+msgstr "مواعيد العمل"
+
+#: agency/models.py:93
+msgid "Header Image"
+msgstr "صورة رأسية"
+
+#: agency/models.py:98 info/models.py:54
+msgid "Setting it to false, makes the image disappear from the page"
+msgstr "إذا تم تعيينه إلى false، فإن الصورة ستختفي من الصفحة"
+
+#: agency/models.py:99 info/models.py:55
+msgid "Creation Date"
+msgstr "تاريخ الإنشاء"
+
+#: agency/models.py:100 info/models.py:56
+msgid "Update Date"
+msgstr "تاريخ التحديث"
+
+#: agency/models.py:103 info/models.py:59
+msgid "Home Page Image"
+msgstr "صورة الصفحة الرئيسية"
+
+#: agency/models.py:104 info/models.py:60
+msgid "Home Page Images"
+msgstr "صور الصفحة الرئيسية"
+
+#: agency/models.py:110
+msgid "Shop"
+msgstr "متجر"
+
+#: agency/models.py:111 info/models.py:32
+msgid "Platform"
+msgstr "المنصة"
+
+#: agency/models.py:112 info/models.py:33
+msgid "Link / Phone Number"
+msgstr "الرابط / رقم الهاتف"
+
+#: agency/models.py:118
+msgid "Social Media Link"
+msgstr "رابط وسائل التواصل الاجتماعي"
+
+#: agency/models.py:119
+msgid "Social Media Links"
+msgstr "روابط وسائل التواصل الاجتماعي"
+
+#: agency/models.py:124
+msgid "Name"
+msgstr "الاسم"
+
+#: agency/models.py:127
+msgid "Icon"
+msgstr "رمز"
+
+#: agency/models.py:134
+msgid "Tag"
+msgstr "علامة"
+
+#: agency/models.py:135 agency/models.py:171
+msgid "Tags"
+msgstr "العلامات"
+
+#: agency/models.py:143
+msgid "Category"
+msgstr "الفئة"
+
+#: agency/models.py:145
+msgid "Travel Name"
+msgstr "اسم الرحلة"
+
+#: agency/models.py:149
+msgid "Origin Country"
+msgstr "الدولة الأصلية"
+
+#: agency/models.py:151
+msgid "Origin City"
+msgstr "المدينة الأصلية"
+
+#: agency/models.py:153
+msgid "Destination Country"
+msgstr "الدولة الوجهة"
+
+#: agency/models.py:155
+msgid "Destination City"
+msgstr "المدينة الوجهة"
+
+#: agency/models.py:157
+msgid "Travel Type"
+msgstr "نوع الرحلة"
+
+#: agency/models.py:159
+msgid "Housing Type"
+msgstr "نوع السكن"
+
+#: agency/models.py:161
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#: agency/models.py:162
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#: agency/models.py:167
+msgid "Price"
+msgstr "السعر"
+
+#: agency/models.py:169
+msgid "Sale Price"
+msgstr "سعر البيع"
+
+#: agency/models.py:173
+msgid "Featured"
+msgstr "مميز"
+
+#: agency/models.py:181
+msgid "Travel"
+msgstr "رحلة"
+
+#: agency/models.py:182
+msgid "Travels"
+msgstr "رحلات"
+
+#: agency/validators.py:16
+#, python-brace-format
+msgid ""
+"{value} is not a valid hexadecimal color. It should be in the format #RRGGBB "
+"or #RGB."
+msgstr "{value} ليس لونًا سداسيًا صحيحًا. يجب أن يكون بالصيغة #RRGGBB أو #RGB."
+
+#: agency/validators.py:27
+msgid ""
+"The slug can only contain English letters, numerics, dashes (-), and "
+"underscores (_)."
+msgstr ""
+"الاسم الرمزي يمكن أن يحتوي فقط على الحروف الإنجليزية، الأرقام، الشرطات (-)، "
+"والشرطات السفلية (_)."
+
+#: agency/validators.py:34
+#, python-format
+msgid "File size %(size)s exceeds the maximum allowed size of %(max_size)s."
+msgstr ""
+"حجم الملف %(size)s يتجاوز الحد الأقصى المسموح به والذي هو %(max_size)s."
+
+#: core/settings.py:166
+msgid "Arabic"
+msgstr "العربية"
+
+#: core/settings.py:167
+msgid "Hebrew"
+msgstr "العبرية"
+
+#: core/settings.py:445 core/settings.py:448
+msgid "Travel48"
+msgstr "ترافل48"
+
+#: core/settings.py:469
+msgid "Welcome To Travel48"
+msgstr "مرحبًا بك في ترافل48"
+
+#: core/settings.py:472
+msgid "Travel48 Development Team"
+msgstr "فريق تطوير ترافل48"
+
+#: core/settings.py:489
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+#: info/apps.py:8
+msgid "Info"
+msgstr "معلومات"
+
+#: info/models.py:12 info/models.py:65 info/models.py:84 info/models.py:103
+msgid "Title"
+msgstr "العنوان"
+
+#: info/models.py:21 info/models.py:22 info/models.py:31 info/models.py:49
+msgid "Website Main Info"
+msgstr "المعلومات الرئيسية للموقع"
+
+#: info/models.py:39 info/models.py:40
+msgid "Social Media"
+msgstr "وسائل التواصل الاجتماعي"
+
+#: info/models.py:75
+msgid "Service"
+msgstr "خدمة"
+
+#: info/models.py:76
+msgid "Services"
+msgstr "خدمات"
+
+#: info/models.py:94 info/models.py:95
+msgid "About Us"
+msgstr "معلومات عنا"
+
+#: info/models.py:108
+msgid "Url"
+msgstr "الرابط"
+
+#: info/models.py:115
+msgid "Themes"
+msgstr "الثيمات"
+
+#: info/models.py:126
+msgid "Message"
+msgstr "الرسالة"
+
+#: info/models.py:131 info/models.py:132
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: locations/apps.py:8
+msgid "Locations"
+msgstr "المواقع"
+
+#: locations/models.py:6
+msgid "Country Name"
+msgstr "اسم الدولة"
+
+#: locations/models.py:7
+msgid "Country Code"
+msgstr "رمز الدولة"
+
+#: locations/models.py:13
+msgid "Countries"
+msgstr "الدول"
+
+#: locations/models.py:28
+msgid "City Name"
+msgstr "اسم المدينة"
+
+#: locations/models.py:29
+msgid "City Code"
+msgstr "رمز المدينة"
+
+#: locations/models.py:35
+msgid "Cities"
+msgstr "المدن"
+
+#: locations/models.py:50
+msgid "State Name"
+msgstr "اسم الولاية"
+
+#: locations/models.py:51
+msgid "State Code"
+msgstr "رمز الولاية"
+
+#: locations/models.py:57
+msgid "States"
+msgstr "الولايات"

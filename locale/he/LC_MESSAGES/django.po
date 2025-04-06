@@ -1,0 +1,572 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-04-06 09:42+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n == 2 && n % "
+"1 == 0) ? 1: (n % 10 == 0 && n % 1 == 0 && n > 10) ? 2 : 3;\n"
+
+#: accounts/admin.py:38
+msgid "Basic Info"
+msgstr "מידע בסיסי"
+
+#: accounts/admin.py:39
+msgid "Personal Info"
+msgstr "מידע אישי"
+
+#: accounts/admin.py:40
+msgid "Permissions"
+msgstr "הרשאות"
+
+#: accounts/admin.py:41 agency/admin.py:36 agency/admin.py:50
+#: agency/admin.py:66 info/admin.py:25 info/admin.py:45 info/admin.py:52
+#: info/admin.py:62 info/admin.py:72 locations/admin.py:25
+#: locations/admin.py:40 locations/admin.py:55
+msgid "Important Dates"
+msgstr "תאריכים חשובים"
+
+#: accounts/apps.py:8
+msgid "Accounts"
+msgstr "חשבונות"
+
+#: accounts/models.py:7 info/models.py:123
+msgid "Full Name"
+msgstr "שם מלא"
+
+#: accounts/models.py:8 info/models.py:125
+msgid "Phone Number"
+msgstr "מספר טלפון"
+
+#: agency/admin.py:35 agency/admin.py:46 agency/admin.py:61 info/admin.py:24
+#: info/admin.py:44 info/admin.py:51 info/admin.py:61 info/admin.py:71
+#: locations/admin.py:24 locations/admin.py:39 locations/admin.py:54
+msgid "Main Info"
+msgstr "מידע עיקרי"
+
+#: agency/admin.py:48 agency/admin.py:64
+msgid "More Info"
+msgstr "מידע נוסף"
+
+#: agency/admin.py:49 agency/models.py:51 info/models.py:114
+msgid "Theme"
+msgstr "נושא"
+
+#: agency/admin.py:62
+msgid "Location"
+msgstr "מיקום"
+
+#: agency/admin.py:63
+msgid "Date"
+msgstr "תאריך"
+
+#: agency/apps.py:8 agency/models.py:64
+msgid "Agencies"
+msgstr "סוכנויות"
+
+#: agency/enums.py:6
+msgid "Facebook"
+msgstr "פייסבוק"
+
+#: agency/enums.py:7
+msgid "Twitter"
+msgstr "טוויטר"
+
+#: agency/enums.py:8
+msgid "Instagram"
+msgstr "אינסטגרם"
+
+#: agency/enums.py:9
+msgid "TikTok"
+msgstr "טיקטוק"
+
+#: agency/enums.py:10
+msgid "YouTube"
+msgstr "יוטיוב"
+
+#: agency/enums.py:11
+msgid "Pinterest"
+msgstr "פינטרסט"
+
+#: agency/enums.py:12
+msgid "Phone Number 1"
+msgstr "מספר טלפון 1"
+
+#: agency/enums.py:13
+msgid "Phone Number 2"
+msgstr "מספר טלפון 2"
+
+#: agency/enums.py:17
+msgid "Saturday"
+msgstr "שבת"
+
+#: agency/enums.py:18
+msgid "Sunday"
+msgstr "ראשון"
+
+#: agency/enums.py:19
+msgid "Monday"
+msgstr "שני"
+
+#: agency/enums.py:20
+msgid "Tuesday"
+msgstr "שלישי"
+
+#: agency/enums.py:21
+msgid "Wednesday"
+msgstr "רביעי"
+
+#: agency/enums.py:22
+msgid "Thursday"
+msgstr "חמישי"
+
+#: agency/enums.py:23
+msgid "Friday"
+msgstr "שישי"
+
+#: agency/enums.py:27
+msgid "Single"
+msgstr "רווק"
+
+#: agency/enums.py:28
+msgid "Couple"
+msgstr "זוג"
+
+#: agency/enums.py:29
+msgid "Family"
+msgstr "משפחה"
+
+#: agency/enums.py:30
+msgid "Group"
+msgstr "קבוצה"
+
+#: agency/enums.py:34
+msgid "Apartment"
+msgstr "דירה"
+
+#: agency/enums.py:35
+msgid "Villa"
+msgstr "ווילה"
+
+#: agency/enums.py:36
+msgid "Hostel"
+msgstr "הוסטל"
+
+#: agency/enums.py:37
+msgid "Camping"
+msgstr "קמפינג"
+
+#: agency/enums.py:38
+msgid "Guesthouse"
+msgstr "צימר"
+
+#: agency/enums.py:39
+msgid "Resort"
+msgstr "אתר נופש"
+
+#: agency/enums.py:40
+msgid "1 Star Hotel"
+msgstr "מלון 1 כוכב"
+
+#: agency/enums.py:41
+msgid "2 Star Hotel"
+msgstr "מלון 2 כוכבים"
+
+#: agency/enums.py:42
+msgid "3 Star Hotel"
+msgstr "מלון 3 כוכבים"
+
+#: agency/enums.py:43
+msgid "4 Star Hotel"
+msgstr "מלון 4 כוכבים"
+
+#: agency/enums.py:44
+msgid "5 Star Hotel"
+msgstr "מלון 5 כוכבים"
+
+#: agency/models.py:22
+msgid "Owner"
+msgstr "בעלים"
+
+#: agency/models.py:24
+msgid "Shop Name"
+msgstr "שם החנות"
+
+#: agency/models.py:25 agency/models.py:146 info/models.py:13 info/models.py:66
+#: info/models.py:85 info/models.py:104
+msgid "Description"
+msgstr "תיאור"
+
+#: agency/models.py:28
+msgid "Slug"
+msgstr "סלאג"
+
+#: agency/models.py:29
+msgid ""
+"Unique identifier for the shop used in the URL. It must contain only English "
+"letters, numerics, dashes (-), and underscores (_)"
+msgstr ""
+"מאפיין ייחודי לחנות המשמש ב-URL. הוא חייב לכלול רק אותיות אנגליות, מספרים, "
+"מקפים (-) וקווים תחתונים (_) "
+
+#: agency/models.py:34 locations/models.py:12 locations/models.py:26
+msgid "Country"
+msgstr "מדינה"
+
+#: agency/models.py:36 locations/models.py:34 locations/models.py:48
+msgid "City"
+msgstr "עיר"
+
+#: agency/models.py:38 locations/models.py:56
+msgid "State"
+msgstr "מדינה"
+
+#: agency/models.py:40 info/models.py:124
+msgid "Email"
+msgstr "אימייל"
+
+#: agency/models.py:41
+msgid "Contact Number"
+msgstr "מספר יצירת קשר"
+
+#: agency/models.py:42
+msgid "WhatsApp Number"
+msgstr "מספר וואטסאפ"
+
+#: agency/models.py:46 agency/models.py:96 agency/models.py:165
+#: info/models.py:16 info/models.py:52 info/models.py:69 info/models.py:88
+#: info/models.py:107
+msgid "Image"
+msgstr "תמונה"
+
+#: agency/models.py:47 agency/models.py:97 agency/models.py:113
+#: agency/models.py:128 agency/models.py:174 info/models.py:34
+#: info/models.py:53 info/models.py:70 info/models.py:89 info/models.py:109
+msgid "Active"
+msgstr "פעיל"
+
+#: agency/models.py:48 agency/models.py:129 agency/models.py:175
+msgid "Order By"
+msgstr "סדר לפי"
+
+#: agency/models.py:53
+msgid "Primary Color"
+msgstr "צבע ראשי"
+
+#: agency/models.py:54
+msgid "Primary color for template (e.g., #RRGGBB or #RGB)."
+msgstr "צבע ראשי לתבנית (למשל, #RRGGBB או #RGB)."
+
+#: agency/models.py:56
+msgid "Border Color"
+msgstr "צבע גבול"
+
+#: agency/models.py:57
+msgid "Border color for template (e.g., #RRGGBB or #RGB)."
+msgstr "צבע גבול לתבנית (למשל, #RRGGBB או #RGB)."
+
+#: agency/models.py:59 agency/models.py:114 agency/models.py:130
+#: agency/models.py:177 info/models.py:17 info/models.py:35 info/models.py:71
+#: info/models.py:90 info/models.py:110 info/models.py:127
+#: locations/models.py:8 locations/models.py:30 locations/models.py:52
+msgid "Create At"
+msgstr "נוצר בתאריך"
+
+#: agency/models.py:60 agency/models.py:115 agency/models.py:131
+#: agency/models.py:178 info/models.py:18 info/models.py:36 info/models.py:72
+#: info/models.py:91 info/models.py:111 info/models.py:128
+#: locations/models.py:9 locations/models.py:31 locations/models.py:53
+msgid "Update At"
+msgstr "עודכן בתאריך"
+
+#: agency/models.py:63 agency/models.py:76
+msgid "Agency"
+msgstr "סוכנות"
+
+#: agency/models.py:77
+msgid "Day"
+msgstr "יום"
+
+#: agency/models.py:78
+msgid "Close"
+msgstr "סגור"
+
+#: agency/models.py:79
+msgid "Indicates whether the restaurant is close on this day"
+msgstr "מציין אם המסעדה סגורה ביום זה"
+
+#: agency/models.py:81
+msgid "Opening Time"
+msgstr "שעת פתיחה"
+
+#: agency/models.py:83
+msgid "Closing Time"
+msgstr "שעת סגירה"
+
+#: agency/models.py:86
+msgid "Work Time"
+msgstr "שעות עבודה"
+
+#: agency/models.py:87
+msgid "Work Times"
+msgstr "שעות עבודה"
+
+#: agency/models.py:93
+msgid "Header Image"
+msgstr "תמונה עליונה"
+
+#: agency/models.py:98 info/models.py:54
+msgid "Setting it to false, makes the image disappear from the page"
+msgstr "הגדרה ל-שקר תגרום לתמונה להיעלם מהדף"
+
+#: agency/models.py:99 info/models.py:55
+msgid "Creation Date"
+msgstr "תאריך יצירה"
+
+#: agency/models.py:100 info/models.py:56
+msgid "Update Date"
+msgstr "תאריך עדכון"
+
+#: agency/models.py:103 info/models.py:59
+msgid "Home Page Image"
+msgstr "תמונה בעמוד הבית"
+
+#: agency/models.py:104 info/models.py:60
+msgid "Home Page Images"
+msgstr "תמונות בעמוד הבית"
+
+#: agency/models.py:110
+msgid "Shop"
+msgstr "חנות"
+
+#: agency/models.py:111 info/models.py:32
+msgid "Platform"
+msgstr "פלטפורמה"
+
+#: agency/models.py:112 info/models.py:33
+msgid "Link / Phone Number"
+msgstr "קישור / מספר טלפון"
+
+#: agency/models.py:118
+msgid "Social Media Link"
+msgstr "קישור לרשתות החברתיות"
+
+#: agency/models.py:119
+msgid "Social Media Links"
+msgstr "קישורים לרשתות החברתיות"
+
+#: agency/models.py:124
+msgid "Name"
+msgstr "שם"
+
+#: agency/models.py:127
+msgid "Icon"
+msgstr "אייקון"
+
+#: agency/models.py:134
+msgid "Tag"
+msgstr "תג"
+
+#: agency/models.py:135 agency/models.py:171
+msgid "Tags"
+msgstr "תגים"
+
+#: agency/models.py:143
+msgid "Category"
+msgstr "קטגוריה"
+
+#: agency/models.py:145
+msgid "Travel Name"
+msgstr "שם טיול"
+
+#: agency/models.py:149
+msgid "Origin Country"
+msgstr "מדינת מוצא"
+
+#: agency/models.py:151
+msgid "Origin City"
+msgstr "עיר מוצא"
+
+#: agency/models.py:153
+msgid "Destination Country"
+msgstr "מדינת יעד"
+
+#: agency/models.py:155
+msgid "Destination City"
+msgstr "עיר יעד"
+
+#: agency/models.py:157
+msgid "Travel Type"
+msgstr "סוג טיול"
+
+#: agency/models.py:159
+msgid "Housing Type"
+msgstr "סוג דיור"
+
+#: agency/models.py:161
+msgid "Start Date"
+msgstr "תאריך התחלה"
+
+#: agency/models.py:162
+msgid "End Date"
+msgstr "תאריך סיום"
+
+#: agency/models.py:167
+msgid "Price"
+msgstr "מחיר"
+
+#: agency/models.py:169
+msgid "Sale Price"
+msgstr "מחיר מכירה"
+
+#: agency/models.py:173
+msgid "Featured"
+msgstr "מומלץ"
+
+#: agency/models.py:181
+msgid "Travel"
+msgstr "טיול"
+
+#: agency/models.py:182
+msgid "Travels"
+msgstr "טיולים"
+
+#: agency/validators.py:16
+#, python-brace-format
+msgid ""
+"{value} is not a valid hexadecimal color. It should be in the format #RRGGBB "
+"or #RGB."
+msgstr ""
+"{value} אינו צבע הקסדצימלי תקני. הוא צריך להיות בפורמט #RRGGBB או #RGB."
+
+#: agency/validators.py:27
+msgid ""
+"The slug can only contain English letters, numerics, dashes (-), and "
+"underscores (_)."
+msgstr ""
+"הסלאג יכול להכיל רק אותיות אנגליות, מספרים, מקפים (-) וקווים תחתונים (_)."
+
+#: agency/validators.py:34
+#, python-format
+msgid "File size %(size)s exceeds the maximum allowed size of %(max_size)s."
+msgstr "גודל הקובץ %(size)s חורג מהגודל המרבי המותר של %(max_size)s."
+
+#: core/settings.py:166
+msgid "Arabic"
+msgstr "ערבית"
+
+#: core/settings.py:167
+msgid "Hebrew"
+msgstr "עברית"
+
+#: core/settings.py:445 core/settings.py:448
+msgid "Travel48"
+msgstr "טרוול48"
+
+#: core/settings.py:469
+msgid "Welcome To Travel48"
+msgstr "ברוכים הבאים לטרוול48"
+
+#: core/settings.py:472
+msgid "Travel48 Development Team"
+msgstr "צוות הפיתוח של טרוול48"
+
+#: core/settings.py:489
+msgid "Home"
+msgstr "בית"
+
+#: info/apps.py:8
+msgid "Info"
+msgstr "מידע"
+
+#: info/models.py:12 info/models.py:65 info/models.py:84 info/models.py:103
+msgid "Title"
+msgstr "כותרת"
+
+#: info/models.py:21 info/models.py:22 info/models.py:31 info/models.py:49
+msgid "Website Main Info"
+msgstr "מידע עיקרי באתר"
+
+#: info/models.py:39 info/models.py:40
+msgid "Social Media"
+msgstr "רשתות חברתיות"
+
+#: info/models.py:75
+msgid "Service"
+msgstr "שירות"
+
+#: info/models.py:76
+msgid "Services"
+msgstr "שירותים"
+
+#: info/models.py:94 info/models.py:95
+msgid "About Us"
+msgstr "אודותינו"
+
+#: info/models.py:108
+msgid "Url"
+msgstr "כתובת אתר"
+
+#: info/models.py:115
+msgid "Themes"
+msgstr "נושאים"
+
+#: info/models.py:126
+msgid "Message"
+msgstr "הודעה"
+
+#: info/models.py:131 info/models.py:132
+msgid "Contact Us"
+msgstr "צור קשר"
+
+#: locations/apps.py:8
+msgid "Locations"
+msgstr "מיקום"
+
+#: locations/models.py:6
+msgid "Country Name"
+msgstr "שם מדינה"
+
+#: locations/models.py:7
+msgid "Country Code"
+msgstr "קוד מדינה"
+
+#: locations/models.py:13
+msgid "Countries"
+msgstr "מדינות"
+
+#: locations/models.py:28
+msgid "City Name"
+msgstr "שם עיר"
+
+#: locations/models.py:29
+msgid "City Code"
+msgstr "קוד עיר"
+
+#: locations/models.py:35
+msgid "Cities"
+msgstr "ערים"
+
+#: locations/models.py:50
+msgid "State Name"
+msgstr "שם מדינה"
+
+#: locations/models.py:51
+msgid "State Code"
+msgstr "קוד מדינה"
+
+#: locations/models.py:57
+msgid "States"
+msgstr "מדינות"
