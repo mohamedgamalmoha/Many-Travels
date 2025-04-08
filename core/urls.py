@@ -24,10 +24,11 @@ from django.views.generic.base import RedirectView
 from drf_spectacular.views import (SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView,
                                    SpectacularJSONAPIView, SpectacularYAMLAPIView)
 
+from agency.sites import customer_admin_site
 
 urlpatterns = [
-    # path('dashboard', RedirectView.as_view(url='/dashboard/', permanent=True)),
-    # path('dashboard/', customer_admin_site.urls),
+    path('dashboard', RedirectView.as_view(url='/dashboard/', permanent=True)),
+    path('dashboard/', customer_admin_site.urls),
     path('admin', RedirectView.as_view(url='/admin/', permanent=True)),
     path('admin/', admin.site.urls),    path('i18n/', include('django.conf.urls.i18n')),
     path('api/locations/', include('locations.api.urls'), name='locations'),
