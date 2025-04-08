@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
+from modeltranslation.admin import TranslationAdmin
 
 from agency.models import  WorkTime, HeaderImage, SocialMediaLink
 
@@ -37,7 +38,7 @@ class TagAdmin(admin.ModelAdmin):
     )
 
 
-class AgencyAdmin(admin.ModelAdmin):
+class AgencyAdmin(TranslationAdmin):
     list_display = ('order', 'name', 'is_active', 'create_at', 'update_at')
     list_filter = ('is_active',)
     search_fields = ('name',)
@@ -52,7 +53,7 @@ class AgencyAdmin(admin.ModelAdmin):
     inlines = [WorkTimeInline, HeaderImageInline, SocialMediaLinkInline]
 
 
-class TravelAdmin(admin.ModelAdmin):
+class TravelAdmin(TranslationAdmin):
     list_display = ('name', 'agency', 'is_active', 'create_at', 'update_at')
     list_filter = ('is_active','travel_type', 'housing_type')
     search_fields = ('name', 'description')
