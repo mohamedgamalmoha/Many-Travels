@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 
-from agency.models import Agency, WorkTime, HeaderImage, SocialMediaLink, Tag, Travel
+from agency.models import  WorkTime, HeaderImage, SocialMediaLink
 
 
 class WorkTimeInline(admin.TabularInline):
@@ -65,8 +65,3 @@ class TravelAdmin(admin.ModelAdmin):
                                      'image')}),
         (_('Important Dates'), {'fields': ('create_at', 'update_at')}),
     )
-
-
-admin.site.register(Tag, TagAdmin)
-admin.site.register(Agency, AgencyAdmin)
-admin.site.register(Travel, TravelAdmin)
