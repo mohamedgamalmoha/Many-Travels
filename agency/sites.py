@@ -7,7 +7,8 @@ from django.utils.translation import gettext_lazy as _
 
 APP_MODELS_ORDER = {
     'agency': ['Agency', 'WorkTime', 'HeaderImage', 'SocialMediaLink', 'Tag', 'Travel'],
-    'info': ['MainInfo', 'AboutUs', 'Theme', 'Service', 'ContactUs']
+    'info': ['MainInfo', 'AboutUs', 'Theme', 'Service', 'ContactUs'],
+    'locations': ['Country', 'City', 'State']
 }
 
 
