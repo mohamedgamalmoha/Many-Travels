@@ -1,18 +1,18 @@
 from django.contrib import admin
 from django.utils.translation import gettext_lazy as _
 
-from modeltranslation.admin import TranslationAdmin, TranslationInlineModelAdmin
+from modeltranslation.admin import TranslationAdmin, TranslationStackedInline
 
 from locations.models import Country, City, State
 
 
-class CityInline(TranslationInlineModelAdmin):
+class CityInline(TranslationStackedInline):
     model = City
     extra = 1
     readonly_fields = ('create_at', 'update_at')
 
 
-class StateInline(TranslationInlineModelAdmin):
+class StateInline(TranslationStackedInline):
     model = State
     extra = 1
     readonly_fields = ('create_at', 'update_at')
@@ -27,6 +27,7 @@ class CountryAdmin(TranslationAdmin):
     search_fields = ('name', 'code')
     list_filter = ('create_at', 'update_at')
     ordering = ('-create_at', '-update_at')
+    readonly_fields = ('create_at', 'update_at')
     inlines = [CityInline]
 
     def get_queryset(self, request):
@@ -57,6 +58,7 @@ class StateAdmin(TranslationAdmin):
     search_fields = ('name', 'code')
     list_filter = ('create_at', 'update_at')
     ordering = ('-create_at', '-update_at')
+    readonly_fields = ('create_at', 'update_at')
 
     def get_queryset(self, request):
         return super().get_queryset(request).select_related('city')
