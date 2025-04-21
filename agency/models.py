@@ -19,7 +19,8 @@ User = get_user_model()
 
 
 class Agency(models.Model):
-    owner = models.OneToOneField(User, on_delete=models.CASCADE, related_name="shop", verbose_name=_("Owner"))
+    owner = models.OneToOneField(User, limit_choices_to={'is_superuser': False, 'is_staff': False},
+                                 on_delete=models.CASCADE, related_name="shop", verbose_name=_("Owner"))
 
     name = models.CharField(max_length=255, verbose_name=_("Shop Name"))
     description = models.TextField(blank=True, null=True, verbose_name=_("Description"))
