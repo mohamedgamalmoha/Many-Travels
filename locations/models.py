@@ -31,7 +31,7 @@ class City(models.Model):
     update_at = models.DateTimeField(auto_now=True, verbose_name=_('Update At'))
 
     class Meta:
-        db_table = _('City')
+        verbose_name = _('City')
         verbose_name_plural = _('Cities')
         ordering = ('-create_at', '-update_at')
 
@@ -53,7 +53,7 @@ class State(models.Model):
     update_at = models.DateTimeField(auto_now=True, verbose_name=_('Update At'))
 
     class Meta:
-        db_table = _('State')
+        verbose_name = _('State')
         verbose_name_plural = _('States')
         ordering = ('-create_at', '-update_at')
 
