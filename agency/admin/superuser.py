@@ -1,5 +1,7 @@
 from django.contrib import admin
+from django.contrib.admin.widgets import AdminTextInputWidget
 from django.utils.translation import gettext_lazy as _
+
 from modeltranslation.admin import TranslationAdmin
 
 from agency.models import  WorkTime, HeaderImage, SocialMediaLink
@@ -32,6 +34,7 @@ class TagAdmin(admin.ModelAdmin):
     list_display = ('order', 'name', 'is_active', 'create_at', 'update_at')
     list_filter = ('is_active', )
     search_fields = ('name', )
+    readonly_fields = ('create_at', 'update_at')
     fieldsets = (
         (_('Main Info'), {'fields': ('name', 'icon', 'order', 'is_active')}),
         (_('Important Dates'), {'fields': ('create_at', 'update_at')}),
@@ -40,6 +43,7 @@ class TagAdmin(admin.ModelAdmin):
 
 class AgencyAdmin(TranslationAdmin):
     list_display = ('order', 'name', 'is_active', 'create_at', 'update_at')
+    list_display_links = ('order', 'name')
     list_filter = ('is_active',)
     search_fields = ('name',)
     readonly_fields = ('create_at', 'update_at')
@@ -52,6 +56,14 @@ class AgencyAdmin(TranslationAdmin):
     )
     inlines = [WorkTimeInline, HeaderImageInline, SocialMediaLinkInline]
 
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        if 'primary_color' in form.base_fields:
+            form.base_fields['primary_color'].widget = AdminTextInputWidget(attrs={'type': 'color'})
+        if 'border_color' in form.base_fields:
+            form.base_fields['border_color'].widget = AdminTextInputWidget(attrs={'type': 'color'})
+        return form
+
 
 class TravelAdmin(TranslationAdmin):
     list_display = ('name', 'agency', 'is_active', 'create_at', 'update_at')
@@ -61,7 +73,7 @@ class TravelAdmin(TranslationAdmin):
     fieldsets = (
         (_('Main Info'), {'fields': ('agency', 'name', 'description', 'price', 'after_sale_price')}),
         (_('Location'), {'fields': ('origin_country', 'origin_city', 'destination_country', 'destination_city')}),
-        (_('Date'), {'fields': ('start_date', 'end_date', 'duration')}),
+        (_('Date'), {'fields': ('start_date', 'end_date')}),
         (_('More Info'), {'fields': ('travel_type', 'housing_type', 'tags', 'is_featured', 'is_active',  'order',
                                      'image')}),
         (_('Important Dates'), {'fields': ('create_at', 'update_at')}),
