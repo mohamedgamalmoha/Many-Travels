@@ -84,7 +84,7 @@ class TravelCustomerAdmin(PermissionsAllowAllAdminMixin, TranslationAdmin):
         (_('Main Info'), {'fields': ('name', 'description', 'price', 'after_sale_price')}),
         (_('Location'), {'fields': ('origin_country', 'origin_city', 'destination_country', 'destination_city')}),
         (_('Date'), {'fields': ('start_date', 'end_date', 'duration')}),
-        (_('More Info'), {'fields': ('travel_type', 'housing_type', 'tags', 'is_featured', 'is_active',  'order',
+        (_('More Info'), {'fields': ('travel_type', 'housing_type', 'tags', 'is_active',  'order',
                                      'image')}),
         (_('Important Dates'), {'fields': ('create_at', 'update_at')}),
     )
