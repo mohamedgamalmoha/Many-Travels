@@ -41,6 +41,7 @@ class CityAdmin(TranslationAdmin):
         (_('Important Dates'), {'fields': ('create_at', 'update_at')})
     )
     search_fields = ('name', 'code')
+    readonly_fields = ('create_at', 'update_at')
     list_filter = ('country', 'create_at', 'update_at')
     ordering = ('-create_at', '-update_at')
     inlines = [StateInline]
