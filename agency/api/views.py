@@ -62,12 +62,12 @@ class AgencyViewSet(FlexFieldsMixin, ReadOnlyModelViewSet):
         return self.list(request, *args, **kwargs)
 
 
-class TravelViewSet(ReadOnlyModelViewSet):
+class TravelViewSet(FlexFieldsMixin, ReadOnlyModelViewSet):
     queryset = Travel.objects.all()
     serializer_class = TravelSerializer
     filter_backends = [FlexFieldsFilterBackend] + api_settings.DEFAULT_FILTER_BACKENDS
     filterset_class = TravelFilterSet
-    permitted_expands = ['agency', 'tags', 'original_country', 'original_city', 'destination_country',
+    permitted_expands = ['agency', 'tags', 'origin_country', 'origin_city', 'destination_country',
                          'destination_city']
     permit_list_expands = permitted_expands
 

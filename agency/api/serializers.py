@@ -11,10 +11,9 @@ class AgencySerializer(FlexFieldsModelSerializer):
         exclude = ()
         read_only_fields = ('create_at', 'update_at')
         expandable_fields = {
-            'work_times': ('agency.api.serializers.WorkTimeSerializer', {'many': True, "omit": ["agency"]}),
-            'header_images': ('agency.api.serializers.HeaderImageSerializer', {'many': True, "omit": ["agency"]}),
-            'social_media_links': ('agency.api.serializers.SocialMediaLinkSerializer', {'many': True,
-                                                                                        "omit": ["agency"]}),
+            'work_times': ('agency.api.serializers.WorkTimeSerializer', {'many': True}),
+            'header_images': ('agency.api.serializers.HeaderImageSerializer', {'many': True}),
+            'social_media_links': ('agency.api.serializers.SocialMediaLinkSerializer', {'many': True}),
             'travels': ('agency.api.serializers.TravelSerializer', {'many': True, "omit": ["agency"]}),
             'country': ('locations.api.serializers.CountrySerializer', {'many': False, "omit": ["agencies"]}),
             'city': ('locations.api.serializers.CitySerializer', {'many': False, "omit": ["agencies"]}),
@@ -53,7 +52,7 @@ class TagSerializer(ModelSerializer):
         read_only_fields = ('create_at', 'update_at')
 
 
-class TravelSerializer(ModelSerializer):
+class TravelSerializer(FlexFieldsModelSerializer):
 
     class Meta:
         model = Travel
@@ -61,7 +60,7 @@ class TravelSerializer(ModelSerializer):
         read_only_fields = ('create_at', 'update_at')
         expandable_fields = {
             'agency': ('agency.api.serializers.AgencySerializer', {'many': False, "omit": ["travels"]}),
-            'tags': ('agency.api.serializers.TagSerializer', {'many': True, "omit": ["travel"]}),
+            'tags': ('agency.api.serializers.TagSerializer', {'many': True}),
             'origin_country': ('locations.api.serializers.CountrySerializer', {'many': False,
                                                                                "omit": ["origin_travels"]}),
             'origin_city': ('locations.api.serializers.CitySerializer', {'many': False, "omit": ["origin_travels"]}),
@@ -69,5 +68,4 @@ class TravelSerializer(ModelSerializer):
                                                                                     "omit": ["destination_travels"]}),
             'destination_city': ('locations.api.serializers.CitySerializer', {'many': False,
                                                                               "omit": ["destination_travels"]})
-
         }
