@@ -91,10 +91,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'core.urls'
 
+REACT_JS_BUILD_DIR = BASE_DIR / 'frontend'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates', REACT_JS_BUILD_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -194,6 +196,7 @@ STATIC_URL = '/assets/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    REACT_JS_BUILD_DIR / 'assets'
 ]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
