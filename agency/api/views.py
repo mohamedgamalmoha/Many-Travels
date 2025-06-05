@@ -48,16 +48,10 @@ class AgencyViewSet(FlexFieldsMixin, ReadOnlyModelViewSet):
 
         # Retrieve the specific Agency object that matches the filter arguments.
         # If no Agency is found, raise a 404 error.
-        agency = get_object_or_404(Travel, **filter_kwargs)
-
-        # Dynamically set the filterset class to be used for filtering travels in the current request.
-        self.filterset_class = TravelFilterSet
-
-        # Dynamically set the serializer class to ProductSerializer for serializing the response.
-        self.serializer_class = TravelSerializer
+        agency = get_object_or_404(Agency, **filter_kwargs)
 
         # Set the queryset to be the travels associated with the retrieved agency.
-        self.queryset = agency.products.filter(is_active=True).order_by('order', '-create_at', '-update_at')
+        self.queryset = agency.travels.filter(is_active=True).order_by('order', '-create_at', '-update_at')
 
         # Delegate to the `list` method to handle filtering, pagination, and serialization of the queryset.
         return self.list(request, *args, **kwargs)
