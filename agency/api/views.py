@@ -19,6 +19,7 @@ class AgencyViewSet(FlexFieldsMixin, ReadOnlyModelViewSet):
     filterset_class = AgencyFilterSet
     permitted_expands = ['work_times', 'header_images', 'social_media_links', 'travels', 'country', 'city', 'state']
     permit_list_expands = permitted_expands
+    lookup_field = 'slug'
 
     def get_queryset(self):
         queryset = super().get_queryset()
